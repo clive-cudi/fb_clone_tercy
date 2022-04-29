@@ -1,0 +1,159 @@
+.app {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+.content {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background: rgb(240, 242, 245);
+}
+.login_wrapper {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.login_col {
+    display: flex;
+    height: 100%;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+.login_form_wrapper {
+    display: flex;
+    height: 350px;
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 10px 20px rgb(0 0 0 / 10%);
+    flex-direction: column;
+    padding: 10px;
+}
+.login_logo_wrapper {
+    display: flex;
+    height: 100px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.login_form_wrapper > form {
+    display: flex;
+    height: fit-content;
+    width: 100%;
+    flex-direction: column;
+}
+.login_form_wrapper > form > input {
+    display: flex;
+    height: 52px;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    color: #1d2129;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.4s;
+}
+.login_form_wrapper > form > fieldset {
+    margin-top: 10px;
+    width: 100%;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+}
+.login_form_wrapper > form > fieldset > legend {
+    font-size: 12px;
+    color: #606770;
+}
+.login_form_wrapper > form > fieldset > input[type= "date"] {
+    display: flex;
+    height: 52px;
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    color: #1d2129;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.4s;
+}
+/* .login_form_wrapper > form > fieldset > input[type= "date"]:focus {
+    outline: none;
+    border: 1px solid rgb(24, 119, 242);
+    box-shadow: 0 0 0 2px #e7f3ff;
+} */
+.login_form_wrapper > form > input:focus,
+.login_form_wrapper > form > fieldset > input[type= "date"]:focus {
+    outline: none;
+    border: 1px solid rgb(24, 119, 242);
+    box-shadow: 0 0 0 2px #e7f3ff;
+}
+.login_form_wrapper > form > button {
+    display: flex;
+    height: 48px;
+    width: 100%;
+    background: #1877f2;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    font-size: 19px;
+    border-radius: 6px;
+    margin-top: 12px;
+    font-weight: 700;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.4s;
+}
+.login_form_wrapper > form > button:hover {
+    cursor: pointer;
+    background: #466ebf;
+}
+.login_strip {
+    display: flex;
+    height: fit-content;
+    min-height: 52px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.login_strip > a {
+    color: #1877f2;
+    font-size: 14px;
+    font-weight: 500;
+}
+.login_strip > button {
+    height: 48px;
+    width: fit-content;
+    min-width: 200px;
+    background: #42b72a;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.4s;
+    margin: 10px;
+}
+.login_strip > button:hover {
+    background: #36a420;
+    cursor: pointer;
+}
+.gender_wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+@media (max-width: 900px) {
+    .login_wrapper {
+        flex-direction: column;
+    }
+    .login_col {
+        width: 100%;
+        height: fit-content;
+    }
+}
