@@ -1,16 +1,19 @@
 import styles from '../styles/auth/Login.module.css';
 import Image from 'next/image';
 import { SignUp } from '../components';
-import { useEffect } from 'react';
+import { useEffect, useContext } from 'react';
 import { QueryResult, useQuery } from '@apollo/client';
-import { SAY_HELLO } from '../graphql';
+// import { SAY_HELLO } from '../graphql';
+import { Modal } from '../components';
+import { ModalCtx } from '../context';
 
 export default function Signup(): JSX.Element{
-    const hello:QueryResult = useQuery(SAY_HELLO);
+    // const hello:QueryResult = useQuery(SAY_HELLO);
+    const [modal, setModal] = useContext(ModalCtx);
 
-    useEffect(():void=>{
-        console.log(hello.data);
-    }, [])
+    // useEffect(():void=>{
+    //     console.log(hello.data);
+    // }, [])
 
     return (
         <div>
@@ -27,6 +30,9 @@ export default function Signup(): JSX.Element{
                         </div>
                     </div>
                 </div>
+                {
+                    modal.open == true && <Modal data={modal.data} />
+                }
             </div>
         </div>
     )
