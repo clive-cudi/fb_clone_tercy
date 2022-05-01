@@ -26,6 +26,7 @@
     height: 100%;
     width: 50%;
     justify-content: center;
+    align-items: center;
 }
 .login_form_wrapper {
     display: flex;
@@ -156,5 +157,6 @@
     .login_col {
         width: 100%;
         height: fit-content;
+        align-items: flex-start;
     }
 }

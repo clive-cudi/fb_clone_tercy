@@ -17,13 +17,27 @@ const typeDefs = gql`
         password: String!
     }
 
+    input loginTypes {
+        email: String!
+        password: String!
+    }
+
     type hello {
         message: String!
+    }
+    
+    type reg {
+        success: Boolean
+        user: user
     }
 
 
     type Mutation {
-        registerUser (input: inputTypes!): user!
+        registerUser (input: inputTypes!): reg!
+    }
+
+    type Mutation {
+        loginUser (input: loginTypes!): reg!
     }
 
     type Query {
